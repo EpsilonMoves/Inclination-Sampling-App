@@ -72,7 +72,7 @@ class InclinationSamplingService : IntentService(""), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent) {
         when (event.sensor.type) {
-            Sensor.TYPE_ACCELEROMETER -> accelerometer = event.values.clone();
+            Sensor.TYPE_ACCELEROMETER -> accelerometer = event.values.clone()
             Sensor.TYPE_MAGNETIC_FIELD -> magnetic = event.values.clone()
         }
         if (accelerometer != null && magnetic != null) {
@@ -92,12 +92,11 @@ class InclinationSamplingService : IntentService(""), SensorEventListener {
                 realWrite.insertFacingObjToDb(FACING_UP, timeStamp, RECORD_ID)
             }
 
-            if (inclination in FACE_UP_INCLINATION..FACE_DOWN_INCLINATION) {
+            else if (inclination in FACE_UP_INCLINATION..FACE_DOWN_INCLINATION) {
                 realWrite.insertFacingObjToDb(FACING_USER, timeStamp, RECORD_ID)
             }
 
-
-            if (inclination > FACE_DOWN_INCLINATION) {
+            else if (inclination > FACE_DOWN_INCLINATION) {
                 realWrite.insertFacingObjToDb(FACING_DOWN, timeStamp, RECORD_ID)
             }
         }
