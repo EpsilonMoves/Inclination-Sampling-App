@@ -1,6 +1,6 @@
 package com.epsilonmoves.inclinationdisplay.dao
 
-interface RealmWriteInterface {
+interface DaoWriteInterface {
 
     fun insertFacingObjToDb(facing: String, timeStamp: Long, recordId: Int)
 }

@@ -9,8 +9,8 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.IBinder
+import com.epsilonmoves.inclinationdisplay.dao.DaoWriteInterface
 import com.epsilonmoves.inclinationdisplay.dao.RealmQueries
-import com.epsilonmoves.inclinationdisplay.dao.RealmWriteInterface
 import com.epsilonmoves.inclinationdisplay.utils.FACING_DOWN
 import com.epsilonmoves.inclinationdisplay.utils.FACING_UP
 import com.epsilonmoves.inclinationdisplay.utils.FACING_USER
@@ -33,7 +33,7 @@ class InclinationSamplingService : IntentService(""), SensorEventListener {
     private lateinit var mAccelerometer: Sensor
     private lateinit var mMagnetic: Sensor
     // Realm interface
-    private val realWrite:RealmWriteInterface = RealmQueries()
+    private val realWrite: DaoWriteInterface = RealmQueries()
 
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {

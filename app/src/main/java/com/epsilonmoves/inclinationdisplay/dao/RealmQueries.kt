@@ -6,7 +6,7 @@ import io.realm.RealmResults
 * class for the realm DB queries
 * */
 
-class RealmQueries:RealmReadInterface,RealmWriteInterface  {
+class RealmQueries: DaoReadInterface, DaoWriteInterface {
     val realm: Realm = Realm.getDefaultInstance()
 
     override fun insertFacingObjToDb(facing: String, timeStamp: Long, recordId: Int) {
