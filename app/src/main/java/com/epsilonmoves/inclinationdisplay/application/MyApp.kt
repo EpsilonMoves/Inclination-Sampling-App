@@ -1,4 +1,4 @@
-package com.epsilonmoves.inclinationdisplay.Application
+package com.epsilonmoves.inclinationdisplay.application
 
 import android.app.Application
 import io.realm.Realm

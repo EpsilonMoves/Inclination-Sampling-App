@@ -3,7 +3,7 @@ package com.epsilonmoves.inclinationdisplay.inclination_main_activity
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.content.Intent
-import com.epsilonmoves.inclinationdisplay.Application.MyApp
+import com.epsilonmoves.inclinationdisplay.application.MyApp
 import com.epsilonmoves.inclinationdisplay.dao.DeviceFacing
 import com.epsilonmoves.inclinationdisplay.dao.RealmQueries
 import com.epsilonmoves.inclinationdisplay.service.InclinationSamplingService
